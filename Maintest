@@ -9,7 +9,7 @@ public class MainDiceTest  {
     	
     	DataArray sharedArray = new DataArray(25);		  	
         
-    	DiceArrayWriter writer1 = new DiceArrayWriter(25, sharedArray);  	
+    	DiceArrayWriter writer1 = new DiceArrayWriter(25, sharedArray,1);  	
     	 writer1.start();
 	}
 }
