@@ -1,0 +1,32 @@
+import java.lang.Runnable;
+
+class DiceArrayWriter implements Runnable 
+{	
+    private  int counter;
+    private  DataArray sharedDataArray;   
+ 	private  int startValue;
+ 	private int randNum;
+ 	private int NumOfDices;
+ 
+   
+    public DiceArrayWriter(int value, DataArray  array, int numOfDices)
+    {
+   	  startValue = value;
+   	  sharedDataArray = array;
+   	  NumOfDices=numOfDices;
+    } 
+           
+    @Override
+    public void run()
+    {    	
+    	for ( int i = 0; i < startValue; i++ )
+    		{   	
+    			if (NumOfDices==1)
+    				sharedDataArray.add(sharedDataArray.throwDice());
+    			else if (NumOfDices==3)    			    				
+    				sharedDataArray.add(sharedDataArray.getRandoms());      			
+    			else 
+    				sharedDataArray.add(0);
+    		}		
+    }      
+} 
