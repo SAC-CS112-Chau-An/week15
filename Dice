@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+import java.util.Random;
+
+
+public class Dice {
+	
+
+	public static int randomInt;	       
+        int total = 0;
+        int numOfDices;
+        
+
+public Dice()
+{}    
+
+public int throwDice()
+{
+	return  1 + (int)(Math.random() * 6);
+}	
+ 	     
+
+public int getRandoms()
+{
+	return randomInt;
+}	     
+   
+public String toString() {
+	StringBuilder result = new StringBuilder(); 
+	String NEW_LINE = System.getProperty("line.separator");
+	    	    
+	
+	result.append(this.getClass().getName() + " Object {" + NEW_LINE);
+	result.append(" Name: Dice" + NEW_LINE);
+	result.append(" Number of dices: 1 " +  NEW_LINE);
+	result.append(" Dice value: " + randomInt + NEW_LINE );
+	result.append("}");
+
+	return result.toString();
+}}
+
+
