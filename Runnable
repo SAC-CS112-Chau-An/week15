@@ -1,6 +1,6 @@
 import java.lang.Runnable;
 
-class DiceArrayWriter implements Runnable 
+public class DiceArrayWriter implements Runnable 
 {	
     private  int counter;
     private  DataArray sharedDataArray;   
